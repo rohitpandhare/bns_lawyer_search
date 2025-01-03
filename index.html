@@ -1,0 +1,45 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Nearby Lawyers</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Maps API with Places library -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzu_38A53svtbCHS76BgAHARHiL2kWSg0&libraries=places&callback=initMap" async defer></script>
+</head>
+<body>
+    <header>
+        <h1>Find Nearby Lawyers</h1>
+    </header>
+    <div id="container">
+        <aside id="sidebar">
+            <div id="search-box">
+                <input id="place-input" type="text" placeholder="Enter a location">
+                <button id="search-button">Search</button>
+            </div>
+            <button id="use-my-location-button">Use My Location</button>
+            <div id="places-list-container">
+                <h2>Lawyers Nearby</h2>
+                <ul id="places-list"></ul>
+            </div>
+        </aside>
+        <main>
+            <div id="map"></div>
+        </main>
+    </div>
+
+    <!-- Modal for location prompt -->
+    <div id="location-modal" class="modal">
+        <div class="modal-content">
+            <p>Would you like to use your current location to find nearby lawyers?</p>
+            <button id="modal-yes">Yes</button>
+            <button id="modal-no">No</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
